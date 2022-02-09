@@ -1,6 +1,8 @@
 package com.thealgorithms.sorts;
 
-import static com.thealgorithms.sorts.SortUtils.*;
+import static com.thealgorithms.sorts.SortUtils.greater;
+import static com.thealgorithms.sorts.SortUtils.print;
+import static com.thealgorithms.sorts.SortUtils.swap;
 
 /**
  * @author Varun Upadhyay (https://github.com/varunu28)
