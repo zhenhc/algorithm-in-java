@@ -23,7 +23,7 @@ public class MinimizingLateness {
     public static void main(String[] args) throws IOException {
         StringTokenizer token;
 
-        BufferedReader in = new BufferedReader(new FileReader("MinimizingLateness/lateness_data.txt"));
+        BufferedReader in = new BufferedReader(new FileReader("E:\\developer\\IDE\\idea-projects\\zhenhc-repositories\\algorithm-in-java\\src\\main\\java\\com\\thealgorithms\\minimizinglateness\\lateness_data.txt"));
         String ch = in.readLine();
         if (ch == null || ch.isEmpty()) {
             in.close();

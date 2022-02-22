@@ -4,7 +4,7 @@
 ├─backtracking
 ├─ciphers
 ├─conversions
-├─datastructures
+├─datastructures  --数据结构
 ├─devutils
 ├─divideandconquer
 ├─dynamicprogramming
@@ -12,10 +12,10 @@
 ├─matrixexponentiation
 ├─minimizinglateness
 ├─misc
-├─others
-├─searches
+├─others    --其他
+├─searches  --搜索
 ├─sorts  --排序算法
-└─strings
+└─strings   --字符串
 ```
 - sorts -- [排序算法](./src/main/java/com/thealgorithms/sorts/sorts.md)
 - 

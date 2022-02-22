@@ -8,6 +8,12 @@ import java.util.NoSuchElementException;
  *
  * @param <Element> - the generic type of an element in this bag
  */
+
+/**
+ * 包：一种只能塞值不能取值的结构。即这个类对外暴露的api永远只有add()，没有get()。
+ * 他的特性在于遍历内部数据时，并不一定需要按照顺序。侧重点在于统计（如求数字的总和，平均值，方差等），而不在于搜索。
+ * @param <Element>
+ */
 public class Bag<Element> implements Iterable<Element> {
 
     private Node<Element> firstElement; // first element of the bag
@@ -44,9 +50,11 @@ public class Bag<Element> implements Iterable<Element> {
     /**
      * @param element - the element to add
      */
+    //添加元素时，都新建一个节点，内容就是元素的值，下一个元素存上次的节点数据（有点类似树形结构和链表）
     public void add(Element element) {
         Node<Element> oldfirst = firstElement;
         firstElement = new Node<>();
+        //外部类可以直接访问内部类的私有属性
         firstElement.content = element;
         firstElement.nextElement = oldfirst;
         size++;
@@ -113,6 +121,7 @@ public class Bag<Element> implements Iterable<Element> {
     public static void main(String[] args) {
         Bag<String> bag = new Bag<>();
 
+        bag.add("4");
         bag.add("1");
         bag.add("1");
         bag.add("2");
@@ -125,5 +134,10 @@ public class Bag<Element> implements Iterable<Element> {
         System.out.println(bag.contains(null));
         System.out.println(bag.contains("1"));
         System.out.println(bag.contains("3"));
+
+        //使用foreach遍历
+        bag.forEach(it -> {
+            System.out.println(it);
+        });
     }
 }
